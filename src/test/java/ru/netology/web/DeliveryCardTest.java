@@ -18,7 +18,7 @@ public class DeliveryCardTest {
 
     @BeforeAll
     static void setUpAll() {
-//        Configuration.headless = true;
+        Configuration.headless = true;
     }
 
     @BeforeEach
