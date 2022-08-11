@@ -33,7 +33,7 @@ public class DeliveryCardTest {
         String meetingDate = LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id = date] .input__control").doubleClick().sendKeys(meetingDate);
         $("[data-test-id = name] .input__control").setValue("Иван Иванов");
-        $("[data-test-id = phone] .input__control").setValue("+79998887766");
+        $("[data-test-id = phone] .input__control").setValue("+799988877");
         $("[data-test-id = agreement]").click();
         $(".button").click();
         $("[data-test-id = notification]").shouldBe(visible, Duration.ofSeconds(15));
