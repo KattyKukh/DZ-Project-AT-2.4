@@ -38,7 +38,7 @@ public class DeliveryCardTest {
     @Test
     void shouldSubmitValidData() {
         $("[data-test-id=city] .input__control").setValue("Санкт-Петербург");
-        String meetingDate = setMeetingDate(5);
+        String meetingDate = setMeetingDate(7);
         $("[data-test-id = date] .input__control").doubleClick().sendKeys(meetingDate);
         $("[data-test-id = name] .input__control").setValue("Иван Иванов");
         $("[data-test-id = phone] .input__control").setValue("+79998887766");
@@ -56,7 +56,7 @@ public class DeliveryCardTest {
     void shouldInputCityFromList() {
         $("[data-test-id=city] .input__control").setValue("ла");
         $$(".menu-item").first().click();
-        String meetingDate = setMeetingDate(5);
+        String meetingDate = setMeetingDate(7);
         $("[data-test-id = date] .input__control").doubleClick().sendKeys(meetingDate);
         $("[data-test-id = name] .input__control").setValue("Иван Иванов");
         $("[data-test-id = phone] .input__control").setValue("+79998887766");
@@ -75,7 +75,7 @@ public class DeliveryCardTest {
         $("[data-test-id=city] .input__control").setValue("Са");
         $$(".menu-item").first().click();
         $(".input__icon").click();
-        long addDays = 20;
+        long addDays = 7;
         String meetingDate = setMeetingDate(addDays);
         String calendarDay = numberDay(meetingDate);
         if (LocalDate.now().plusDays(addDays).getMonthValue() > LocalDate.now().getMonthValue()) {
